@@ -1,12 +1,13 @@
 import requests
+import config
 
 # Bing Search API settings
 BING_SEARCH_URL = "https://api.bing.microsoft.com/v7.0/search"
-BING_API_KEY = "5dda97573975414987887a971a4a4b92"  
+BING_API_KEY = config.BING_API_KEY 
 
 # Hugging Face Falcon API settings
 FALCON_API_URL = "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct"
-FALCON_API_TOKEN = "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"  
+FALCON_API_TOKEN = config.FALCON_API_TOKEN 
 
 
 def fetch_bing_search_results(query, count=3):
